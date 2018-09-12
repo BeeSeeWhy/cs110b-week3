@@ -3,73 +3,68 @@
 using namespace std;
 
 void showMenu();
-int getFirstNum();
-int getSecondNum();
-void addition();
-void subtraction();
-void multiplication();
-void division();
-void square();
-void squareroot();
-void cube();
-void cuberoot();
-void power();
+double getFirstNum();
+double getSecondNum();
+double addition();
+double subtraction();
+double multiplication();
+double division();
+double square();
+double squareroot();
+double cube();
+double cuberoot();
+double power();
 
 
 int main()
 {
-    int choice, num1, num2, result;
+    	int choice;
+	double result;
 
-    showMenu();
-    cout << "Enter your choice: ";
-    cin >> choice;
+    	showMenu();
+    	cout << "Enter your choice: ";
+    	cin >> choice;
 
 
-    switch (choice)
-    {
+    	switch (choice)
+    	{
         case 1 :
-                // do addition;
-                addition();
+                result = addition();
                 break;
         case 2 :
-                // subtraction
-                subtraction();
+                result = subtraction();
                 break;
         case 3 :
-                // multiplication
-                multiplication();
+                result = multiplication();
                 break;
         case 4 :
-                // division
-                division();
+                result = division();
                 break;
         case 5 :
-                // square
-                square();
+                result = square();
                 break;
         case 6 :
-                // square root
-                squareroot();
+                result = squareroot();
                 break;
         case 7 :
-                // cube
-                cube();
+                result = cube();
                 break;
         case 8 :
-                // cube root 
-                cuberoot();
+                result = cuberoot();
                 break;
-        case 9 :
-                //power
-                power();
+      	case 9 :
+                result = power();
                 break;
         case 10 :
                 break;
         default:
                 cout << "Invalid choice." << endl;
-    }
+    	}
+	
+    	cout << "The result is " << result << '.' << endl;
+    
 
-    return 0;
+    	return 0;
 
 }
 
@@ -90,117 +85,125 @@ void showMenu()
         cout << "10. Exit" << endl;
 }
 
-int getFirstNum()
+double getFirstNum()
 {
-    int num1;
-    cout << "Enter first number: ";
-    cin >> num1;
+    	double num1;
+    	cout << "Enter first number: ";
+    	cin >> num1;
 
-    return num1;
+    	return num1;
 }
 
-int getSecondNum()
+double getSecondNum()
 {
-    int num2;
-    cout << "Enter second number: ";
-    cin >> num2;
+    	double num2;
+   	cout << "Enter second number: ";
+    	cin >> num2;
 
-    return num2;
+    	return num2;
 }
-void addition()
+
+double addition()
 {
-        //do addition
-        int num1, num2, result;
+        double num1, num2, result;
 
         num1 = getFirstNum();
         num2 = getSecondNum();
 
         result =  num1 + num2;
-        cout << "The result is " << result << '.' << endl;
+
+	return result;
 }
 
-void subtraction()
+double subtraction()
 {
-        //do subtraction
-        int num1, num2, result;
+        double num1, num2, result;
     
         num1 = getFirstNum();
         num2 = getSecondNum();
 
         result = num1 - num2;
-        cout << "The result is " << result << '.' << endl;
+
+	return result;
 }
 
-void multiplication()
+double multiplication()
 {
-    int num1, num2, result;
+    	double num1, num2, result;
 
-    num1 = getFirstNum();
-    num2 = getSecondNum();
+    	num1 = getFirstNum();
+    	num2 = getSecondNum();
 
-    result = num1 * num2;
-    cout << "The result is " << result << '.' << endl;
+    	result = num1 * num2;
+
+	return result;
 }
 
-void division()
+double division()
 {
-    int num1, num2, result;
-    num1 = getFirstNum();
-    num2 = getSecondNum();
+    	double num1, num2, result;
+    	num1 = getFirstNum();
+    	num2 = getSecondNum();
 
-    if (num2 == 0)
-    {
-        cout << "You cannot divide by 0" << endl;
-        cout << "Enter second number: ";
-        cin >> num2;
-    }
+    	if (num2 == 0)
+    	{
+        	cout << "You cannot divide by 0" << endl;
+        	cout << "Enter second number: ";
+        	cin >> num2;
+    	}
 
-    result = num1 / num2;
-    cout << "The result is " << result << endl;
+    	result = num1 / num2;
+	
+	return result;
 }
 
-void square()
+double square()
 {
-    int num1, result;
-    num1 = getFirstNum();
+    	double num1, result;
+    	num1 = getFirstNum();
 
-    result = pow(num1, 2.0);
-    cout << "The result is " << result << '.' << endl;
+    	result = pow(num1, 2.0);
+
+	return result;
 }
 
-void squareroot()
+double squareroot()
 {
-    double num1, result;
-    num1 = getFirstNum();
+    	double num1, result;
+    	num1 = getFirstNum();
 
-    result = sqrt(num1);
-    cout << "The result is " << result << '.' << endl;
+    	result = sqrt(num1);
+
+	return result;
 }
 
-void cube()
+double cube()
 {
-    double num1, num2, result;
-    num1 = getFirstNum();
+    	double num1, num2, result;
+    	num1 = getFirstNum();
 
-    result = pow(num1, 3.0);
-    cout << "The result is " << result << '.' << endl;
+	result = pow(num1, 3.0);
+
+	return result;
 }
 
-void cuberoot()
+double cuberoot()
 {
-    double num1, result;
-    num1 = getFirstNum();
+	double num1, result;
+	num1 = getFirstNum();
+	
+	result = pow(num1, 0.33333333333);
 
-    result = pow(num1, 0.33333333333);
-    cout << "The result is " << result << '.' << endl;
+	return result;
 }
 
-void power()
+double power()
 {
-    int num1, num2, result;
-    num1 = getFirstNum();
-    num2 = getSecondNum();
+    	double num1, num2, result;
+    	num1 = getFirstNum();
+    	num2 = getSecondNum();
 
-    result = pow(num1, num2);
-    cout << "The result is " << result << '.' << endl;
+    	result = pow(num1, num2);
+
+	return result;
 }
